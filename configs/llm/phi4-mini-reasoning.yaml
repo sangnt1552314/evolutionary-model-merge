@@ -1,0 +1,10 @@
+model:
+  target: evomerge.CausalLMWithvLLM
+  params:
+    model_path: microsoft/Phi-4-mini-reasoning
+    model_kwargs:
+      dtype: bfloat16 #float16
+    template: llama3 #vn-alpaca-cot
+  
+eval:
+  target: evomerge.eval.VnMGSM
